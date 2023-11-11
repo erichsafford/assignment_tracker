@@ -21,7 +21,7 @@
         global $db;
         $query = 'DELETE FROM assignments WHERE ID = :assign_ID';
         $statement = $db->prepare($query);
-        $statement->bindValue(':assign_id', $assignment_id);
+        $statement->bindValue(':assign_ID', $assignment_id);
         $statement->execute();
         $statement->closeCursor();
     }

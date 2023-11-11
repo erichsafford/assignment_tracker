@@ -6,8 +6,7 @@
         <form action="." method="GET" id="list__header_select" class="list__header_select">
             <input type="hidden" name="action" value="list_assignments">
             <select name="course_id" required>
-                <option value="0">View All</option>
-                
+                <option value="0">View All</option>                
                 <?php foreach ($courses as $course) : ?>
                     <?php if ($course_id == $course['courseID']) { ?>
                         <option value="<?= $course['courseID'] ?>" selected>
@@ -29,9 +28,9 @@
                     <p><?= $assignment['Description'] ?></p>
                 </div>
                 <div class="list__remove_item">
-                    <form action="." mehtod='POST'>
+                    <form action="." method='post'>
                         <input type="hidden" name="action" value="delete_assignment">
-                        <input type="hidden" name="assignment_id" value="<?= $assignment['ID'] ?>">
+                        <input type="hidden" name="assignment_id" value="<?= $assignment['ID']; ?>">
                         <button class="remove-button">❌</button>
                     </form>
                 </div>
